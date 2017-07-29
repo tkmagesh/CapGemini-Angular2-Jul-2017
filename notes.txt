@@ -1,0 +1,14 @@
+To install angular cli (command line interface)
+npm install @angular/cli -g
+
+ng (scaffolding tool)
+-----
+to create an application
+ng new hello-world-app
+
+package.json
+metadata information about the application
+
+dependencies (runtime)
+devDependencies (dev)
+scripts

@@ -1,0 +1,70 @@
+<!-- 
+1. Add a new bug
+2. List the bugs 
+3. Toggle the closed status of a bug
+4. Remove closed bugs
+5. Display statistics (# of closed bugs / total number of bugs)
+ -->
+<style>
+	section{
+		margin-bottom: 10px;
+	}
+	.bugname, .stats{
+		font-size: 22pt;
+	}
+	.bugname{
+		cursor: pointer;
+	}
+	ol{
+		width: 500px;
+		list-style: none;
+		-webkit-padding-start : 0px;
+	}
+	li{
+		margin-bottom: 10px;
+		border : 2px solid gray;
+		background-color: #e7e7e7;
+		padding: 10px;
+		border-radius: 5px;
+	}
+	.closed{
+		color : red;
+		text-decoration: line-through;
+		font-style: italic;
+		font-weight: bold;
+	}
+	body{
+		margin-left: 50px;
+	}
+</style>
+<h1>Bug Tracker</h1>
+<hr>
+<section class="stats">
+	<span class="closed">2</span>
+	<span> / </span>
+	<span>5</span>
+</section>
+<section class="sort">
+	<label for="">Order By :</label>
+	<select name="" id=""></select>
+	<label for="">Decending ? :</label>
+	<input type="checkbox" name="" id="">
+</section>
+<section class="edit">
+	<label for="">New Bug :</label>
+	<input type="text" name="" id="">
+	<input type="button" value="Create">
+</section>
+<section class="list">
+	<ol>
+		<li>
+			<span class="bugname">[This is test bug - 1]</span>
+			<div class="datetime">[Created At]</div>
+		</li>
+		<li>
+			<span class="bugname closed">[This is test bug - 2]</span>
+			<div class="datetime">[Created At]</div>
+		</li>
+	</ol>
+	<input type="button" value="Remove Closed">
+</section>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Hello World</title>
+		<script>
+			function greetUser(){
+			    //var username = prompt('Enter the name :');
+			    var txtName = document.getElementById('txtName');
+			    var username = txtName.value;
+			    var greetMsg = 'Hi ' + username + ', Welcome to Pune!';
+			    var message = document.getElementById('message');
+			    message.innerHTML = greetMsg;
+			}
+			function init(){
+				var btn = document.getElementById('btnGreet');
+				btn.addEventListener('click', greetUser);
+			}
+			window.addEventListener('DOMContentLoaded', init)
+		</script>
+	</head>
+	<body>
+		<input type="text" name="" id="txtName">
+		<input type="button" value="Greet" id="btnGreet">
+		<div id="message">Welcome to the world of Internet!!</div>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia inventore suscipit pariatur et adipisci. Consequuntur aliquam hic consectetur in beatae, necessitatibus magni eius fuga reiciendis deserunt pariatur enim inventore officia!</p>
+	</body>
+</html>
