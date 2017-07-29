@@ -1,0 +1,11 @@
+.result{
+	font-size: 22pt;
+}
+
+.positive{
+	color : green;
+}
+
+.negative{
+	color : red;
+}

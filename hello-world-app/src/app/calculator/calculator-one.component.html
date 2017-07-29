@@ -1,0 +1,8 @@
+<h1>Calculator - 1</h1>
+<input type="number" [(ngModel)] = "calculator.number1">
+<input type="number" [(ngModel)] = "calculator.number2">
+<input type="button" value="Add" (click)="calculator.add()">
+<input type="button" value="Subtract" (click)="calculator.subtract()">
+<input type="button" value="Multiply" (click)="calculator.multiply()">
+<input type="button" value="Divide" (click)="calculator.divide()">
+<div class="result" [ngClass]="{positive : calculator.result >=0, negative : calculator.result < 0}">{{calculator.result | currency:'INR'}}</div>

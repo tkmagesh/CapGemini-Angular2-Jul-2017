@@ -1,0 +1,4 @@
+<label for="">Name :</label>
+<input type="text" #txtUserName>
+<input type="button" value="Greet" (click)="onGreeterClick(txtUserName.value)">
+<div class="highlight">{{message | lowercase}}</div>
