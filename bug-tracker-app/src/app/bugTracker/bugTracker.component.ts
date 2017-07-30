@@ -18,11 +18,9 @@ export class BugTrackerComponent{
 			.subscribe(bugs => this.bugs = bugs);
 		
 	}
-	onCreateClick(bugName : string){
-		this.bugServer
-			.addNew(bugName)
-			.subscribe(newBug => this.bugs = [...this.bugs, newBug])
-		
+	
+	onBugCreated(newBug){
+		this.bugs.push(newBug);
 	}
 
 	onRemoveClosedClick(){
