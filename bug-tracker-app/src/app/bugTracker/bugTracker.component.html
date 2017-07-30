@@ -1,6 +1,5 @@
 <h1>Bug Tracker</h1>
 <hr>
-<input type="text" [(ngModel)]="somewhere">
 <section class="stats">
 	<span class="closed">{{bugs | closedCount}}</span>
 	<span>/</span>
@@ -32,7 +31,7 @@
 			>
 				{{bug.name | trimText}}
 			</span>
-			<div class="datetime">[created at]</div>
+			<div class="datetime">[{{bug.createdAt | elapsed}}]</div>
 			<div>[{{bug.id}}]</div>
 		</li>
 	</ol>

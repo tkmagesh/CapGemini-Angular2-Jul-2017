@@ -1,0 +1,47 @@
+import { Component } from '@angular/core';
+import { IBug } from './models/IBug';
+import { BugStorageService } from './services/BugStorage.service';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
+@Component({
+	selector : 'bug-tracker',
+	templateUrl : 'bugTracker.component.html',
+	styleUrls : ['bugTracker.component.css']
+})
+export class BugTrackerComponent{
+	bugs : IBug[] = [];
+	bugSortBy : string = 'name';
+	byDescending : boolean = false;
+
+	constructor(private bugStorage : BugStorageService, private http : Http){
+		this.bugs = this.bugStorage.getAll();
+		/*
+		fetch('http://localhost:3000/bugs')
+			.then(response => response.json())
+			.then(bugs => this.bugs = bugs)
+			*/
+		/*this.http
+			.get('http://localhost:3000/bugs')
+			.map(response => response.json())
+			.subscribe(bugs => this.bugs = bugs);*/
+	}
+	onCreateClick(bugName : string){
+		let newBug : IBug = this.bugStorage.addNew(bugName);
+		this.bugs = [...this.bugs, newBug];
+	}
+
+	onRemoveClosedClick(){
+		for(let index = this.bugs.length - 1; index >=0 ; index--){
+			if (this.bugs[index].isClosed){
+				this.bugStorage.remove(this.bugs[index]);
+				this.bugs.splice(index,1);
+			}
+		}
+	}
+
+	onBugNameClick(bug : IBug){
+		this.bugStorage.toggle(bug);
+	}
+
+}
