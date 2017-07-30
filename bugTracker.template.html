@@ -7,8 +7,25 @@ Use Cases
 (done) 4. Remove closed bugs
 (done) 5. Display statistics (# of closed bugs / total # of bugs)
 (done) 6. Improve bug display
-7. Sort the bugs
-8. Persist the bugs in the localStorage
+(done) 7. Sort the bugs
+		8. Persist the bugs in the localStorage
+			window.localStorage
+			===================
+			* key/value store
+			* key has to be unique
+			* both key and value must be strings
+			* use JSON.stringify & JSON.parse for searialization and deserialization
+			* follows Same-Origin-Policy
+			* approx 10MB limit
+			* APIs
+			=======
+				- setItem(key, value)
+				- getItem(key) => value
+				- removeItem(key)
+				- key(index) => key at index
+				- clear()
+				- length
+
 9. Display 'createdAt'
 10. Persist the bugs in the server
 11. Make the bugs accessible using unique urls
