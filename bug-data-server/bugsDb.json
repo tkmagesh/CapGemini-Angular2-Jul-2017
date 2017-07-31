@@ -35,6 +35,12 @@
       "name": "Routing not working",
       "isClosed": false,
       "createdAt": "2017-07-30T11:02:11.229Z"
+    },
+    {
+      "id": 11,
+      "name": "Application deployment failed",
+      "isClosed": true,
+      "createdAt": "2017-07-30T11:28:03.441Z"
     }
   ],
   "employees": [
